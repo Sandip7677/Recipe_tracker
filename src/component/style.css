@@ -46,6 +46,16 @@
     height: 300px;
   }
 
+  h1{
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .nav{
+    /* margin:0 auto ;*/
+    text-align: center;
+    margin-top:1rem ;
+  }
+
   .search{
     width: 20rem;
     padding: 5px;
@@ -53,6 +63,7 @@
     height:2.5rem;
     border: none;
     outline: none;
+    font-size: 1.5rem;
 }
 
 .search:active,.search:hover{
@@ -68,6 +79,7 @@
     height:2.5rem;
     border-radius:0  10px 10px 0;
     background-color: cadetblue;
+    font-size: 1.5rem;
 }
 .button:active,.button:hover{
     /* box-shadow: inset -5px -5px magenta; */
@@ -191,6 +203,11 @@
       grid-gap: 50px;
       justify-content: space-around;
     }
+    .search{
+        width: 10rem;
+        
+    }
+    
   }
   
   /* ---------- Button styles ------------------ */

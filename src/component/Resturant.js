@@ -6,9 +6,10 @@ import Menucard from "./Menucard";
 const Resturant = () => {
   const [recipi, setRecipi] = useState([]);
   const [searchdata, setSearchdata] = useState("chicken");
+
   const getdata = async () => {
     const recipe = await axios.get(
-      `https://api.edamam.com/api/recipes/v2?type=public&q=${searchdata}&app_id=9223cf9b&app_key=8daf0aae98ec03149759b6398bbf3413`
+      `https://api.edamam.com/api/recipes/v2?type=public&q=${searchdata}&app_id=9223cf9b&app_key=${process.env.REACT_APP_KEY}`
     );
     setRecipi(recipe.data.hits);
     console.log(recipe.data.hits);
@@ -19,7 +20,8 @@ const Resturant = () => {
 
   return (
     <>
-      <div className="nav d-flex">
+      <h1>Find Your Desired Recipe</h1>
+      <div className="nav">
         <input
           type="text"
           placeholder="search.."
