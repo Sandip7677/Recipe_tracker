@@ -29,6 +29,7 @@
     grid-template-columns: repeat(3, minmax(300px, 500px));
     grid-gap: 50px;
     justify-content: space-around;
+    padding:10px;
   }
   
   .card-container {
@@ -44,6 +45,35 @@
     max-width: 100%;
     height: 300px;
   }
+
+  .search{
+    width: 20rem;
+    padding: 5px;
+    border-radius: 10px 0 0 10px;
+    height:2.5rem;
+    border: none;
+    outline: none;
+}
+
+.search:active,.search:hover{
+    /* box-shadow: inset 5px 5px magenta; */
+    border: none;
+    outline: none;
+}
+
+.button{
+    border: none;
+    outline: none;
+    width: 5rem;
+    height:2.5rem;
+    border-radius:0  10px 10px 0;
+    background-color: cadetblue;
+}
+.button:active,.button:hover{
+    /* box-shadow: inset -5px -5px magenta; */
+    border: none;
+    outline: none;
+}
   
   .card {
     background-color: #fff;
@@ -124,9 +154,18 @@
     padding: 5px 10px;
     cursor: pointer;
   }
+  .card-tag a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #aaa;
+  }
   
   .card-tag:hover {
     background: #aaa;
+    color: black;
+  }
+
+  .card-tag a:hover {
     color: black;
   }
   
@@ -156,61 +195,4 @@
   
   /* ---------- Button styles ------------------ */
   
-  .navbar {
-    padding-top: 50px;
-    text-align: center;
-  }
-  
-  .navbar h1 {
-    padding-bottom: 20px;
-    text-transform: capitalize;
-  }
-  
-  /** button group styles **/
-  .btn-group {
-    border-radius: 1rem;
-    text-transform: capitalize;
-  }
-  .btn-group__item {
-    border: none;
-    /* min-width: 6rem; */
-    padding: 1.5rem 3rem;
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-    margin: 0;
-    font-size: 17px;
-    box-shadow: inset 0px 0px 0px -15px rebeccapurple;
-    transition: all 300ms ease-out;
-    text-transform: capitalize;
-  }
-  .btn-group__item:last-child {
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
-  .btn-group__item:first-child {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-  }
-  .btn-group__item:hover,
-  .btn-group__item:focus {
-    color: rebeccapurple;
-    box-shadow: inset 0px -20px 0px -15px rebeccapurple;
-  }
-  .btn-group__item:focus {
-    outline: none;
-  }
-  .btn-group__item:after {
-    content: "✔️";
-    margin-left: 0.5rem;
-    display: inline-block;
-    color: rebeccapurple;
-    position: absolute;
-    transform: translatey(10px);
-    opacity: 0;
-    transition: all 200ms ease-out;
-  }
-  .btn-group__item--active:after {
-    opacity: 1;
-    transform: translatey(-2px);
-  }
-  
+ 
